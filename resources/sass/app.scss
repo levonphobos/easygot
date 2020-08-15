@@ -1,0 +1,195 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Fontawesome Path
+$fa-font-path: "webfonts";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+
+
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar
+{
+    width: 0;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: #FFF;
+    background-image: -webkit-gradient(linear,
+        40% 0%,
+        75% 84%,
+        from(#4D9C41),
+        to(#19911D),
+        color-stop(.6,#54DE5D))
+}
+
+body {
+    background-image: url("groovepaper_@2X.png");
+}
+
+button:focus{
+    box-shadow: none!important;
+}
+
+hr {
+    margin: 0;
+}
+
+.navbar_style {
+    background-color: $purple;
+    color: $white;
+    padding: 0 0 0 30px;
+
+    img.logo-icon {
+        width: 50px;
+    }
+}
+
+.prevImg {
+    height: 60px;
+}
+
+.online-status {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 2px;
+    bottom: 3px;
+    border-radius: 50%;
+    border: 2px solid white;
+    animation: status-online 3s ease-out infinite;
+}
+
+@keyframes status-online {
+    0% {
+        background-color: rgb(181, 225, 125);
+    }
+
+    30% {
+        background-color: green;
+    }
+
+    100% {
+        background-color: green;
+    }
+}
+
+.profile-dropdown {
+    div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: auto;
+        bottom: auto;
+        transform: translate(-116px, 53px);
+
+        * {
+            font-size: 13px !important;
+        }
+
+        *:hover {
+            text-decoration: none !important;
+        }
+
+        button {
+            &:hover {
+                background-color: rgb(219, 246, 194);
+            }
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+    & > button {
+        margin-top: 10px;
+        color: white !important;
+    }
+}
+
+.profile-img-block {
+    display: inline-block;
+    position: relative;
+    margin-top: 4px;
+}
+
+.offline-status {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    right: 1px;
+    bottom: 4px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: rgb(188, 188, 188);
+}
+
+.dropdown-toggle {
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.img-block {
+    background-color:rgb(181,255,125);
+    height:100vh;
+    img{
+        width:50%;
+        margin:auto;
+    }
+};
+
+.profile-img-bg{
+    background-color: rgb(219, 246, 194);
+}
+
+.profile-name{
+    background-color: $purple;
+    color:white;
+}
+
+.card-image-block {
+    height: 130px;
+    overflow: hidden;
+    img{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.review-star-block{
+    i{
+        font-size: 0.7rem;
+    }
+}
+
+.empty-review-star{
+    color:$nofill;
+}
+
+.likeBtn{
+    color:$nofill;
+}
+
+.posts-block{
+    overflow: auto;
+    height: 487px;
+}
