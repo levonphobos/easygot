@@ -2521,11 +2521,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Mail",
   methods: {
     sendMail: function sendMail() {
       axios.get('/api/send/mail').then(function (response) {
+        console.log(response);
+      });
+    },
+    sendSms: function sendSms() {
+      axios.get('/api/send/sms').then(function (response) {
         console.log(response);
       });
     }
@@ -45795,6 +45801,12 @@ var render = function() {
       "button",
       { staticClass: "btn btn-primary m-5", on: { click: _vm.sendMail } },
       [_vm._v("Send Mail")]
+    ),
+    _vm._v(" "),
+    _c(
+      "button",
+      { staticClass: "btn btn-primary m-5", on: { click: _vm.sendSms } },
+      [_vm._v("Send SMS")]
     )
   ])
 }
