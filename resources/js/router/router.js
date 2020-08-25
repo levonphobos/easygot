@@ -15,6 +15,7 @@ import Pagination from "../views/Pagination";
 import LoadMore from "../views/LoadMore";
 import Test from "../views/Test";
 import Mail from "../views/Mail";
+import File from "../views/File";
 
 Vue.use(VueRouter);
 
@@ -92,6 +93,11 @@ const routes = [
     {
         path: '/send/mail',
         component: Mail,
+        meta: {requiresAuth: false}
+    },
+    {
+        path: '/read/file',
+        component: File,
         meta: {requiresAuth: false}
     },
     // {

@@ -32,3 +32,4 @@ Route::get('/posts/pagination', 'PostController@getPosts');
 //Route::get('/test', 'PostController@show')->middleware('test');
 Route::get('/send/mail', 'MailSend@mailsend');
 Route::get('/send/sms', 'MailSend@smssend');
+Route::post('/read/file', 'MailSend@readfile');
